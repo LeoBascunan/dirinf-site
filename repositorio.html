@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIRINF – Repositorio de Documentos</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <!-- Estilos del sitio -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <style>
+    /* Ajustes suaves */
+    #repo-page h1 { font-size: 2rem; }
+    .doc-card .badge { font-weight: 600; }
+    .doc-meta { font-size: .9rem; color: #6c757d; }
+    .tag { font-size: .75rem; border: 1px solid #dee2e6; border-radius: .375rem; padding: .15rem .5rem; margin-right: .25rem; }
+    /* Que el sticky navbar no tape anclas (si las usas) */
+    .scroll-offset { scroll-margin-top: 100px; }
+  </style>
+</head>
+
+<body id="repo-page">
+  <!-- Navbar inyectado -->
+  <div id="nav-placeholder"></div>
+
+  <main class="container py-5">
+    <header class="mb-4 text-center">
+      <h1 class="mb-2">Repositorio de Documentos</h1>
+      <p class="text-muted mb-0">Descargas oficiales: leyes y normativas, políticas, manuales, formularios, etc.</p>
+    </header>
+
+    <!-- Buscador + filtros -->
+    <section class="mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-lg-6">
+          <label for="doc-search" class="form-label mb-1">Buscar</label>
+          <input id="doc-search" type="search" class="form-control" placeholder="Título, palabras clave…" />
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="d-flex flex-wrap gap-2 align-items-end">
+            <div>
+              <label class="form-label mb-1">Categoría</label>
+              <select id="doc-filter" class="form-select">
+                <option value="__all__">Todas</option>
+                <option value="Leyes y Normativas">Leyes y Normativas</option>
+                <option value="Políticas internas">Políticas internas</option>
+                <option value="Manuales y Guías">Manuales y Guías</option>
+                <option value="Formularios">Formularios</option>
+              </select>
+            </div>
+            <div class="ms-auto">
+              <label class="form-label mb-1">Orden</label>
+              <select id="doc-sort" class="form-select">
+                <option value="year-desc">Más recientes</option>
+                <option value="year-asc">Más antiguos</option>
+                <option value="title-asc">Título A–Z</option>
+                <option value="title-desc">Título Z–A</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lista de documentos -->
+    <section id="repositorio" class="scroll-offset">
+      <div id="doc-list" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"></div>
+      <div id="doc-empty" class="text-center text-muted py-5 d-none">No se encontraron documentos.</div>
+    </section>
+  </main>
+
+  <!-- Footer inyectado -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- Scripts del sitio (inyecta nav/footer y maneja offset) -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Catálogo y lógica del repositorio -->
+  <script>
+    // ====== 1) Catálogo (editar / agregar aquí) =================================
+    // Colocar PDFs en assets/docs/ y actualizar la ruta "file".
+    const DOCS = [
+      {
+        id: "ley-21180",
+        title: "Ley N° 21.180 — Transformación Digital del Estado",
+        category: "Leyes y Normativas",
+        year: 2019,
+        file: "assets/docs/ley-21180-transformacion-digital.pdf",
+        summary: "Regula documentos y trámites electrónicos en los órganos del Estado.",
+        tags: ["Ley", "Transformación Digital", "Estado"]
+      },
+      {
+        id: "ley-19628",
+        title: "Ley N° 19.628 — Protección de la Vida Privada",
+        category: "Leyes y Normativas",
+        year: 1999,
+        file: "assets/docs/ley-19628-proteccion-datos.pdf",
+        summary: "Norma el tratamiento de datos personales.",
+        tags: ["Ley", "Datos personales"]
+      },
+      {
+        id: "politica-cs",
+        title: "Política de Ciberseguridad UA (versión 2025)",
+        category: "Políticas internas",
+        year: 2025,
+        file: "assets/docs/politica-ciberseguridad-ua.pdf",
+        summary: "Lineamientos y responsabilidades para la seguridad de la información.",
+        tags: ["Política", "Ciberseguridad"]
+      },
+      {
+        id: "norma-pass",
+        title: "Norma de Contraseñas UA",
+        category: "Políticas internas",
+        year: 2024,
+        file: "assets/docs/norma-contrasenas-ua.pdf",
+        summary: "Requisitos de robustez, caducidad y resguardo de credenciales.",
+        tags: ["Norma", "Seguridad"]
+      },
+      {
+        id: "manual-sia",
+        title: "Manual de Usuario — SIA",
+        category: "Manuales y Guías",
+        year: 2024,
+        file: "assets/docs/manual-sia-usuario.pdf",
+        summary: "Operaciones básicas y mejores prácticas en el Sistema SIA.",
+        tags: ["Manual", "SIA"]
+      },
+      {
+        id: "form-acceso",
+        title: "Formulario de Solicitud de Acceso",
+        category: "Formularios",
+        year: 2025,
+        file: "assets/docs/form-solicitud-acceso.pdf",
+        summary: "Solicitud de creación de cuentas y perfiles de acceso.",
+        tags: ["Formulario", "Accesos"]
+      }
+    ];
+
+    // ====== 2) Utilidades ======================================================
+    const fmtSize = bytes => {
+      if (!bytes || isNaN(bytes)) return "";
+      const units = ["B", "KB", "MB", "GB"];
+      let u = 0, v = +bytes;
+      while (v >= 1024 && u < units.length - 1) { v /= 1024; u++; }
+      return `${v.toFixed(v < 10 && u > 0 ? 1 : 0)} ${units[u]}`;
+    };
+
+    // Intento obtener tamaño con HEAD; si falla, se omite
+    async function resolveSizes(items) {
+      await Promise.all(items.map(async d => {
+        try {
+          const r = await fetch(d.file, { method: "HEAD" });
+          const len = r.headers.get("content-length");
+          if (len) d.size = fmtSize(+len);
+        } catch { /* sin tamaño */ }
+      }));
+      return items;
+    }
+
+    // ====== 3) Render ==========================================================
+    const $list  = document.getElementById("doc-list");
+    const $empty = document.getElementById("doc-empty");
+    const $q     = document.getElementById("doc-search");
+    const $cat   = document.getElementById("doc-filter");
+    const $sort  = document.getElementById("doc-sort");
+
+    let state = { q: "", cat: "__all__", sort: "year-desc" };
+
+    function match(doc) {
+      const byCat = state.cat === "__all__" || doc.category === state.cat;
+      const text  = (doc.title + " " + (doc.summary||"") + " " + (doc.tags||[]).join(" ")).toLowerCase();
+      const byQ   = !state.q || text.includes(state.q.toLowerCase());
+      return byCat && byQ;
+    }
+
+    function sortDocs(a, b) {
+      switch (state.sort) {
+        case "year-asc":  return (a.year||0) - (b.year||0) || a.title.localeCompare(b.title);
+        case "title-asc": return a.title.localeCompare(b.title);
+        case "title-desc":return b.title.localeCompare(a.title);
+        case "year-desc":
+        default:          return (b.year||0) - (a.year||0) || a.title.localeCompare(b.title);
+      }
+    }
+
+    function card(doc) {
+      const size = doc.size ? ` · ${doc.size}` : "";
+      const tags = (doc.tags||[]).map(t => `<span class="tag">${t}</span>`).join(" ");
+      return `
+        <div class="col">
+          <article class="card h-100 doc-card">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge text-bg-light border">${doc.category}</span>
+                <span class="doc-meta">${doc.year || ""}${size}</span>
+              </div>
+              <h3 class="h5 mb-2">${doc.title}</h3>
+              <p class="mb-3 text-justify">${doc.summary || ""}</p>
+              <div class="mb-3">${tags}</div>
+              <div class="mt-auto d-flex gap-2">
+                <a class="btn btn-outline-primary flex-grow-1" href="${doc.file}" target="_blank" rel="noopener">
+                  Ver PDF
+                </a>
+                <a class="btn btn-primary" href="${doc.file}" download>
+                  Descargar
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>`;
+    }
+
+    function render(items) {
+      const filtered = items.filter(match).sort(sortDocs);
+      $list.innerHTML = filtered.map(card).join("");
+      $empty.classList.toggle("d-none", filtered.length > 0);
+    }
+
+    // ====== 4) Eventos =========================================================
+    $q.addEventListener("input", e => { state.q = e.target.value.trim(); render(DOCS); });
+    $cat.addEventListener("change", e => { state.cat = e.target.value; render(DOCS); });
+    $sort.addEventListener("change", e => { state.sort = e.target.value; render(DOCS); });
+
+    // ====== 5) Boot ============================================================
+    resolveSizes(DOCS).then(() => render(DOCS));
+  </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIRINF – Dirección de Informática</title>
+
+  <!-- Bootstrap CSS (CDN sin SRI para evitar incompatibilidades) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+
+  <!-- Ajustes para el carrusel: altura fija y recorte uniforme -->
+  <style>
+    #dirinfCarousel .carousel-item {
+      height: 300px;
+      /* Ajusta esta altura al 50% del original */
+    }
+
+    #dirinfCarousel .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar DIRINF con separadores y textos en dos líneas -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Carrusel de noticias -->
+  <section id="inicio" class="mt-4 mb-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12
+         ">
+          <div id="dirinfCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#dirinfCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#dirinfCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#dirinfCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/carousel/noticia1.jpeg" class="d-block w-100" alt="Noticia 1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Título Noticia 1</h5>
+                  <p>Descripción breve o enlace.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/carousel/noticia2.jpeg" class="d-block w-100" alt="Noticia 2">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Título Noticia 2</h5>
+                  <p>Descripción breve o enlace.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/carousel/noticia3.jpeg" class="d-block w-100" alt="Noticia 3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Título Noticia 3</h5>
+                  <p>Descripción breve o enlace.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#dirinfCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#dirinfCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios principales -->
+  <section id="servicios-principales" class="py-5">
+    <div class="container bg-light p-4 rounded ">
+      <h2 class="mb-4 text-center">Servicios Destacados</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">SIA</h5>
+              <p class="card-text">Gestión académica y administrativa.</p>
+              <a href="https://toconao.uantof.cl/programaciondocente/general/informativo.xhtml"
+                class="stretched-link">Acceder</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">uCampus</h5>
+              <p class="card-text">Plataforma de actividades estudiantiles.</p>
+              <a href="https://ucampus.uantof.cl/" class="stretched-link">Acceder</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Portal de Servicios</h5>
+              <p class="card-text">Información y solicitudes de soporte.</p>
+              <a href="https://caichinque.uantof.cl/portalservicios/comun/SemaforoServlet"
+                class="stretched-link">Acceder</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+
+  <!-- Sección intermedia de presentación -->
+  <section id="presentacion" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <!-- Imagen a la izquierda (más adelante cambias el src) -->
+        <div class="col-md-6">
+          <img src="assets/img/nosotros.png" alt="Descripción" class="img-fluid rounded">
+        </div>
+        <!-- Texto a la derecha -->
+        <div class="col-md-6">
+          <span class="badge categoria mb-2">NOSOTROS</span>
+          <h2 class="mb-3">Dirección de informática de la Universidad de Antofagasta - DIRINF</h2>
+          <p class="mb-4">
+            Apoyamos la transformación de la Universidad para que avance al ritmo de la actualización global. Queremos
+            desarrollar las herramientas y habilidades que permitan a la comunidad universitaria…
+          </p>
+          <a href="presentacion.html" class="btn btn-primary">Seguir leyendo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- Vista previa de otras secciones -->
+  <section id="preview" class="py-5">
+    <div class="container bg-light p-4 rounded ">
+      <h2 class="text-center mb-4 text-center">Más sobre la Dirección de Informática</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5>Catálogo de Servicios</h5>
+              <p>Nuestra oferta completa y responsables de apoyo.</p>
+              <a href="servicios.html" class="btn btn-outline-primary mt-2">Ver catálogo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5>Leyes y Normativas</h5>
+              <p>Accede a nuestra biblioteca de recursos legales.</p>
+              <a href="repositorio.html" class="btn btn-outline-primary mt-2">Ver normativa</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5>Ciberseguridad</h5>
+              <p>Políticas y buenas prácticas en seguridad informática.</p>
+              <a href="ciberseguridad.html" class="btn btn-outline-primary mt-2">Más info</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5>Transformación Digital</h5>
+              <p>Conoce nuestros proyectos de innovación tecnológica.</p>
+              <a href="transformacion.html" class="btn btn-outline-primary mt-2">Aprende más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Noticias -->
+<section id="noticias" class="py-5">
+  <div class="container">
+    <!-- Noticia 1 (imagen derecha) -->
+    <div class="row align-items-center g-4 noticia">
+      <div class="col-md-6">
+        <h2 class="mb-3">Noticia 1</h2>
+        <p>En la Dirección de informática, impulsamos la adopción de tecnologías de vanguardia para mejorar la enseñanza, la investigación y la gestión académica...</p>
+        <a href="#" class="btn btn-primary">Descubre más →</a>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/img/transformacion-digital.webp" alt="Imagen Noticia 1" class="img-fluid rounded noticia-img" loading="lazy">
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Noticia 2 (imagen izquierda) -->
+    <div class="row align-items-center g-4 noticia">
+      <div class="col-md-6 order-md-1">
+        <img src="assets/img/transformacion-digital.webp" alt="Imagen Noticia 2" class="img-fluid rounded noticia-img" loading="lazy">
+      </div>
+      <div class="col-md-6 order-md-2">
+        <h2 class="mb-3">Noticia 2</h2>
+        <p>Texto de la noticia 2. Breve resumen que invite a leer el contenido completo o visitar el enlace asociado...</p>
+        <a href="#" class="btn btn-primary">Leer más →</a>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Noticia 3 (imagen derecha) -->
+    <div class="row align-items-center g-4 noticia">
+      <div class="col-md-6">
+        <h2 class="mb-3">Noticia 3</h2>
+        <p>Texto de la noticia 3. Otro extracto breve con foco en el hito o actividad destacada...</p>
+        <a href="#" class="btn btn-primary">Ver detalle →</a>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/img/transformacion-digital.webp" alt="Imagen Noticia 3" class="img-fluid rounded noticia-img" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+
+
+
+
+
+
+
+  <!-- Bootstrap JS (CDN sin SRI) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+
+  <!-- Inicializar carrusel manualmente -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var carouselEl = document.querySelector('#dirinfCarousel');
+      var carousel = bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+        interval: 5000,
+        wrap: true
+      });
+      carousel.cycle();
+    });
+  </script>
+
+  <!-- Scripts personalizados -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

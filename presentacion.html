@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIRINF – Presentación</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+
+<body>
+  <!-- Nav inyectado -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Contenido principal -->
+  <main class="py-5">
+    <div class="container">
+
+      <section class="scroll-offset py-5">
+        <div class="container">
+          <h2 class="mb-4">Presentación</h2>
+          <p class="text-justify">
+            La Estructura de la Dirección de Informática fue decretada a través del decreto 3340/2012,
+            aunque su formación data desde el año 2007, como parte del plan de desarrollo estratégico
+            de la época. Los principales objetivos que ha perseguido la Dirección son entregar
+            servicios con calidad orientados a los usuarios, integrar los datos desde diversas fuentes
+            de ámbito académico, administrativo y financiero, e introducir tecnologías de la comunicación
+            e información para aportar a la innovación y apoyar la mejora continua de los procesos. Su
+            organización ha variado desde su formación en función de las necesidades que se han debido
+            cubrir a causa de las continuas exigencias del medio interno y externo.
+          </p>
+          <p>
+            Desde su creación la Dirección de Informática ha trabajado en forma constante en automatizar
+            procesos; adquirir bienes y servicios tecnológicos; implementar metodologías de diseño y
+            construcción de aplicaciones; y gestionar el recurso humano informático, entre otras misiones.
+            Además, la Dirección está conformada por 3 unidades que cubren necesidades primarias de la
+            institución, desde soporte computacional hasta desarrollo de software para apoyar la gestión
+            universitaria.
+          </p>
+        </div>
+      </section>
+
+      <section class="scroll-offset py-5" style="background-color: #f8f9fa">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-lg-2 g-4 align-items-start">
+            <div class="col">
+              <h2 class="mt-0 mb-3 text-justify">Misión</h2>
+              <p class="text-justify">
+                La Dirección de Informática tiene como misión asegurar el funcionamiento tecnológico de la institución,
+                en
+                cumplimiento con las normativas y requisitos legales, promoviendo el uso responsable y eficiente de los
+                recursos digitales. A través de una gestión autónoma y de sus unidades especializadas, fortalece las
+                capacidades internas para sostener y evolucionar los procesos de gestión, formación, vinculación,
+                investigación y del ámbito clínico. Provee infraestructura tecnológica, datos confiables, soporte
+                operativo,
+                soluciones digitales y servicios de ciberseguridad, contribuyendo así a la toma de decisiones informada,
+                la
+                optimización de procesos y la transformación digital alineada con los objetivos estratégicos de la
+                universidad.
+              </p>
+            </div>
+
+            <div class="col">
+              <h2 class="mt-0 mb-3">Visión</h2>
+              <p>
+                Asegurar el funcionamiento tecnológico de la institución en cumplimiento con las normativas y requisitos
+                legales, promoviendo el uso responsable de los recursos digitales, garantizando altos estándares de
+                calidad
+                y proyectando la incorporación de tecnología consolidada. Todo ello mediante una gestión autónoma,
+                fortaleciendo las capacidades internas para sostener y evolucionar los procesos de gestión, formación,
+                vinculación e investigación a través de la tecnología.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="organigrama" class="scroll-offset py-5">
+        <div class="container">
+          <h2 class="mt-5">Organigrama</h2>
+          <!-- Organigrama (SVG responsive, sin dependencias) -->
+          <!-- Organigrama (SVG con wrap y separación) -->
+          <svg viewBox="0 0 1500 640" width="100%" role="img" aria-label="Organigrama DIRINF"
+            style="max-width:100%;height:auto;display:block" preserveAspectRatio="xMidYMin meet">
+            
+
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8"
+                orient="auto-start-reverse">
+                <path d="M0 0L10 5L0 10Z" fill="var(--line)" />
+              </marker>
+            </defs>
+
+            <!-- Coordenadas base (centro vertical = x=765) -->
+            <!-- Dirección -->
+            <line class="thin" x1="765" y1="96" x2="765" y2="130" marker-end="url(#arrow)" />
+            <g transform="translate(645,40)">
+              <rect class="box" width="240" height="56" />
+              <text class="label" x="120" y="34" text-anchor="middle">Dirección de Informática</text>
+            </g>
+
+            <!-- Director -->
+            <g class="hand" transform="translate(645,130)">
+              <a href="presentacion.html">
+                <rect class="box" width="240" height="56" />
+                <text class="label" x="120" y="34" text-anchor="middle">Director de Informática</text>
+              </a>
+            </g>
+
+            <!-- Secretaría y Gestor -->
+            <g transform="translate(450,220)">
+              <rect class="box" width="210" height="56" />
+              <text class="label" x="105" y="34" text-anchor="middle">Secretaría</text>
+            </g>
+            <g transform="translate(870,220)">
+              <rect class="box" width="210" height="56" />
+              <text class="label" x="105" y="34" text-anchor="middle">Gestor de proyectos</text>
+            </g>
+
+            <!-- Doble flecha punteada -->
+            <line class="thin dotted" x1="660" y1="248" x2="870" y2="248" marker-start="url(#arrow)"
+              marker-end="url(#arrow)" />
+
+            <!-- Director → barra -->
+            <line class="thin no-arrow" x1="765" y1="186" x2="765" y2="350" />
+
+            <!-- Barra horizontal -->
+            <line class="thin" x1="150" y1="350" x2="1380" y2="350" />
+
+            <!-- Postes verticales (centros con separación para que no se toquen) -->
+            <!-- Centros: 150, 355, 560, 765, 970, 1175, 1380  (gap ≈ 25 px entre cajas de 200px) -->
+            <g class="thin" marker-end="url(#arrow)">
+              <line  x1="150" y1="350" x2="150" y2="460" />
+              <line  x1="355" y1="350" x2="355" y2="460" />
+              <line  x1="560" y1="350" x2="560" y2="460" />
+              <line  x1="765" y1="350" x2="765" y2="460" />
+              <line  x1="970" y1="350" x2="970" y2="460" />
+              <line  x1="1175" y1="350" x2="1175" y2="460" />
+              <line  x1="1380" y1="350" x2="1380" y2="460" />
+            </g>
+
+            <!-- Cajas de departamentos (W=200, H=64, con wrap) -->
+            <g class="hand" transform="translate(50,460)">
+              <a href="departamentos.html#aplicaciones-automatizacion">
+                <rect class="box" width="200" height="64" />
+                <foreignObject x="0" y="0" width="200" height="64">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="wrap small">
+                    Departamento de Aplicaciones y Automatización de procesos
+                  </div>
+                </foreignObject>
+              </a>
+            </g>
+
+            <g class="hand" transform="translate(255,460)">
+              <a href="departamentos.html#datos">
+                <rect class="box" width="200" height="64" />
+                <foreignObject x="0" y="0" width="200" height="64">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="wrap">Departamento de Datos</div>
+                </foreignObject>
+              </a>
+            </g>
+
+            <g class="hand" transform="translate(460,460)">
+              <a href="infraestructura.html">
+                <rect class="box" width="200" height="64" />
+                <foreignObject x="0" y="0" width="200" height="64">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="wrap small">
+                    Departamento de Infraestructura Tecnológica
+                  </div>
+                </foreignObject>
+              </a>
+            </g>
+
+            <g class="hand" transform="translate(665,460)">
+              <a href="soporte.html">
+                <rect class="box" width="200" height="64" />
+                <foreignObject x="0" y="0" width="200" height="64">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="wrap small">
+                    Departamento Soporte Computacional
+                  </div>
+                </foreignObject>
+              </a>
+            </g>
+
+            <g class="hand" transform="translate(870,460)">
+              <a href="clinica.html">
+                <rect class="box" width="200" height="64" />
+                <foreignObject x="0" y="0" width="200" height="64">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="wrap small">
+                    Departamento Tecnología e Informática Clínica
+                  </div>
+                </foreignObject>
+              </a>
+            </g>
+
+            <g class="hand" transform="translate(1075,460)">
+              <a href="transformacion.html">
+                <rect class="box" width="200" height="64" />
+                <foreignObject x="0" y="0" width="200" height="64">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="wrap small">
+                    Unidad de Transformación Digital
+                  </div>
+                </foreignObject>
+              </a>
+            </g>
+
+            <g class="hand" transform="translate(1280,460)">
+              <a href="ciberseguridad.html">
+                <rect class="box" width="200" height="64" />
+                <foreignObject x="0" y="0" width="200" height="64">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="wrap small">
+                    Unidad de Ciberseguridad
+                  </div>
+                </foreignObject>
+              </a>
+            </g>
+          </svg>
+
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer inyectado -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <!-- Tu main.js (fetch de nav/footer, carrusel, etc.) -->
+  <script src="assets/js/main.js"></script>
+
+  
+
+</body>
+
+</html>
