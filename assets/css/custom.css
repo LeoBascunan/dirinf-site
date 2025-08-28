@@ -735,3 +735,27 @@ footer strong {
     margin-bottom: .5rem;
   }
 }
+/* Contingencia: mostrar imagen completa (sin recorte) */
+#contingencia .noticia-img.contain {
+  height: 320px;                /* conserva altura uniforme con Noticias */
+  width: 100%;
+  object-fit: contain !important; /* ← clave: muestra toda la imagen */
+  object-position: top center;    /* parte superior visible; usa 'center' si prefieres centrar */
+  background: transparent;               /* “barras” discretas si no calza exacto; cámbialo o quítalo */
+}
+
+/* Alternativa: que la imagen defina su alto (sin barras), pero las filas ya no tendrán la misma altura */
+#contingencia .noticia-img.natural {
+  height: auto !important;
+  width: 100%;
+  object-fit: contain !important;
+  object-position: top center;
+  background: transparent;
+}
+/* Solo agrega el + en los kpi que tengan la clase .plus */
+.kpi-number.plus::after{
+  content: " +";
+  font-weight: 700;       /* opcional */
+  margin-left: .05em;     /* opcional, separa un poco */
+}
+.kpi-number{ white-space:nowrap; } /* evita salto de línea entre número y + */
