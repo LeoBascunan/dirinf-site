@@ -4,12 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DIRINF – Transformación Digital</title>
+  <title>DIRINF – Ciberseguridad</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     crossorigin="anonymous" />
-
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="assets/css/custom.css" />
 </head>
@@ -19,81 +18,337 @@
   <div id="nav-placeholder"></div>
 
   <main class="py-5">
-    <div class="container">
-      <h2 class="mb-5">Ciberseguridad</h2>
-
-      <!-- ¿Qué es la Transformación Digital? -->
-      <section id="que-es" class="scroll-offset py-5" style="background-color: #f8f9fa">
+    
+      <div class="container">
+        <h2 class="mb-5">Ciberseguridad</h2>
+      </div>
+      <!-- ¿Qué es la Ciberseguridad? -->
+      <section id="que-es" class="py-5 bg-light">
         <div class="container">
           <h2 class="mb-4">¿Qué es la Ciberseguridad?</h2>
-
-
           <p>
-            La ciberseguridad es el conjunto de políticas, prácticas, tecnologías y medidas destinadas a proteger los
-            sistemas informáticos, las redes y la información institucional frente a amenazas, vulnerabilidades y
-            ataques cibernéticos. Su objetivo es resguardar la confidencialidad, integridad y disponibilidad de los
-            datos, así como asegurar la continuidad operativa de los servicios digitales.
-            Como universidad pública, estamos obligados a cumplir con exigencias normativas como la Ley Marco de
-            Ciberseguridad N° 21.663, la Ley de Protección de Datos Personales N° 21.719, y la Ley de Transformación
-            Digital del Estado N° 21.180, entre otras.
-          <p>
-            La ciberseguridad permite proteger la infraestructura crítica de la Universidad, prevenir el robo de
-            información sensible de estudiantes, funcionarios y académicos, y garantizar la continuidad y confianza de
-            los procesos académicos, administrativos y clínicos. Además, contribuye al cumplimiento de estándares
-            legales y técnicos ante auditorías, fiscalizaciones y compromisos con el Estado.
+            La ciberseguridad es el conjunto de políticas, prácticas, tecnologías y medidas destinadas a proteger
+            sistemas,
+            redes e información institucional frente a amenazas y ataques. Su objetivo es resguardar la
+            <strong>confidencialidad</strong>, <strong>integridad</strong> y <strong>disponibilidad</strong> de los
+            datos y asegurar la continuidad de los servicios.
           </p>
-
+          <p class="mb-0">
+            Como universidad pública, estamos alineados con la Ley Marco de Ciberseguridad N° 21.663, la Ley de
+            Protección de Datos Personales N° 21.719 y la Ley de Transformación Digital del Estado N° 21.180, entre
+            otras.
+          </p>
         </div>
       </section>
 
 
 
-      <!-- Unidad de Ciberseguridad -->
-      <section id="unidad-cs" class="scroll-offset py-5 bg-white">
+      <!-- NUEVO: Principios de la Ciberseguridad -->
+      <section id="principios" class="scroll-offset py-5 bg-white">
         <div class="container">
-          <h2 class="mb-4">Ciberseguridad en la UA</h2>
-          <p><strong>Visión:</strong> Ser una Universidad estatal de referencia nacional e internacional, reconocida por
-            liderar la transformación digital desde el norte de Chile, articulando tecnologías, procesos, datos y
-            cultura organizacional.</p>
-          <p><strong>Misión:</strong> Impulsar la transformación digital como estrategia institucional, movilizando a la
-            comunidad hacia la colaboración, el aprendizaje continuo y la innovación responsable, con foco en las
-            personas.</p>
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+            <h2 class="mb-0">Principios de la Ciberseguridad</h2>
+            <a href="#buenas-practicas" class="btn btn-outline-primary btn-sm">Ir a Buenas prácticas</a>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h5">Confidencialidad</h3>
+                  <p class="mb-2">Acceso a la información solo por personas autorizadas.</p>
+                  <ul class="small mb-0">
+                    <li>Control de accesos y perfiles.</li>
+                    <li>Cifrado de datos sensibles.</li>
+                    <li>Uso responsable del correo institucional.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h5">Integridad</h3>
+                  <p class="mb-2">Los datos se mantienen completos y sin alteraciones no autorizadas.</p>
+                  <ul class="small mb-0">
+                    <li>Controles de cambios y auditorías.</li>
+                    <li>Firmas/huellas digitales y verificación.</li>
+                    <li>Respaldo ante corrupción de datos.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h5">Disponibilidad</h3>
+                  <p class="mb-2">Los sistemas y datos están accesibles cuando se necesitan.</p>
+                  <ul class="small mb-0">
+                    <li>Monitoreo y alta disponibilidad.</li>
+                    <li>Planes de continuidad y recuperación.</li>
+                    <li>Gestión de parches y mantenimiento.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-
-  
-      <!-- Unidad de Transformación Digital -->
-      <section id="unidad-td" class="scroll-offset py-5" style="background-color: #f8f9fa">
+      <!-- NUEVO: Buenas prácticas para la comunidad universitaria -->
+      <section id="buenas-practicas" class="scroll-offset py-5" style="background-color:#f8f9fa;">
         <div class="container">
-          <h2 class="mb-4">Leyes y Normativas</h2>
-          <p>Próximamente se publicará información sobre la estructura y el equipo de la Unidad de Ciberseguridad</p>
-        </div>
-      </section>
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+            <h2 class="mb-0">Buenas prácticas para la comunidad universitaria</h2>
+            <a href="#amenazas-comunes" class="btn btn-outline-primary btn-sm">Ir a Amenazas comunes</a>
+          </div>
 
-      <!-- ¿Quiénes somos? -->
-      <section id="quienes-somos" class="scroll-offset py-5 bg-white">
-        <div class="container">
-          <h2 class="mb-4">¿Quiénes somos?</h2>
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-              <div class="p-3 bg-light  rounded">Unidad de CS</div>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="accordion" id="accordionBuenas">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="bp1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bp1c"
+                      aria-expanded="true" aria-controls="bp1c">
+                      Contraseñas seguras y autenticación
+                    </button>
+                  </h2>
+                  <div id="bp1c" class="accordion-collapse collapse show" aria-labelledby="bp1"
+                    data-bs-parent="#accordionBuenas">
+                    <div class="accordion-body">
+                      <ul class="mb-0">
+                        <li>Usa contraseñas largas (12+ caracteres) y únicas por servicio.</li>
+                        <li>Activa <strong>doble factor</strong> (MFA) cuando esté disponible.</li>
+                        <li>No compartas credenciales ni las envíes por correo/chat.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="bp2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#bp2c" aria-expanded="false" aria-controls="bp2c">
+                      Correo institucional y phishing
+                    </button>
+                  </h2>
+                  <div id="bp2c" class="accordion-collapse collapse" aria-labelledby="bp2"
+                    data-bs-parent="#accordionBuenas">
+                    <div class="accordion-body">
+                      <ul class="mb-0">
+                        <li>Desconfía de enlaces inesperados o adjuntos de remitentes desconocidos.</li>
+                        <li>Revisa la dirección del remitente y errores ortográficos.</li>
+                        <li>Si dudas, <strong>reporta</strong> a la Unidad de Ciberseguridad antes de interactuar.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="bp3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#bp3c" aria-expanded="false" aria-controls="bp3c">
+                      Actualizaciones y software
+                    </button>
+                  </h2>
+                  <div id="bp3c" class="accordion-collapse collapse" aria-labelledby="bp3"
+                    data-bs-parent="#accordionBuenas">
+                    <div class="accordion-body">
+                      <ul class="mb-0">
+                        <li>Mantén sistema operativo y aplicaciones <strong>actualizados</strong>.</li>
+                        <li>Instala software solo desde fuentes oficiales o TI.</li>
+                        <li>No uses crackeos o extensiones dudosas.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
-            <div class="col">
-              <div class="p-3 bg-light  rounded">Gobernanza de datos</div>
+
+            <div class="col-lg-6">
+              <div class="accordion" id="accordionBuenas2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="bp4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#bp4c" aria-expanded="false" aria-controls="bp4c">
+                      Dispositivos y redes
+                    </button>
+                  </h2>
+                  <div id="bp4c" class="accordion-collapse collapse" aria-labelledby="bp4"
+                    data-bs-parent="#accordionBuenas2">
+                    <div class="accordion-body">
+                      <ul class="mb-0">
+                        <li>Bloquea tu equipo al alejarte (Win+L / Ctrl+Cmd+Q).</li>
+                        <li>Evita Wi-Fi públicas o usa VPN institucional.</li>
+                        <li>Respalda información institucional según las pautas de TI.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="bp5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#bp5c" aria-expanded="false" aria-controls="bp5c">
+                      Datos personales y sensibles
+                    </button>
+                  </h2>
+                  <div id="bp5c" class="accordion-collapse collapse" aria-labelledby="bp5"
+                    data-bs-parent="#accordionBuenas2">
+                    <div class="accordion-body">
+                      <ul class="mb-0">
+                        <li>Minimiza la recolección y el envío de datos sensibles.</li>
+                        <li>Usa canales cifrados y autorizados para compartir información.</li>
+                        <li>Elimina archivos que ya no sean necesarios y clasifica correctamente.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="bp6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#bp6c" aria-expanded="false" aria-controls="bp6c">
+                      Reporte de incidentes
+                    </button>
+                  </h2>
+                  <div id="bp6c" class="accordion-collapse collapse" aria-labelledby="bp6"
+                    data-bs-parent="#accordionBuenas2">
+                    <div class="accordion-body">
+                      <ul class="mb-0">
+                        <li>Si sospechas de un correo o enlace, <strong>no hagas clic</strong> y reporta.</li>
+                        <li>Ante pérdida/robo de equipo o fuga de datos, informa de inmediato a la unidad.</li>
+                        <li>Guarda evidencias (capturas, correos) cuando sea seguro hacerlo.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
-            <div class="col">
-              <div class="p-3 bg-light  rounded">Estrategia y Gestión del Cambio</div>
-            </div>
+
           </div>
         </div>
       </section>
 
+      <!-- NUEVO: Amenazas comunes -->
+      <section id="amenazas-comunes" class="scroll-offset py-5 bg-white">
+        <div class="container">
+          <h2 class="mb-4">Amenazas comunes</h2>
 
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h6 text-uppercase mb-2">Phishing</h3>
+                  <p class="mb-2">Mensajes que suplantan identidad para robar credenciales o información.</p>
+                  <ul class="small mb-0">
+                    <li>Verifica remitente y dominio.</li>
+                    <li>No hagas clic en enlaces dudosos.</li>
+                    <li>Reporta correos sospechosos.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-   
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h6 text-uppercase mb-2">Malware / Ransomware</h3>
+                  <p class="mb-2">Software malicioso que puede cifrar, robar o dañar información.</p>
+                  <ul class="small mb-0">
+                    <li>Mantén antivirus y parches al día.</li>
+                    <li>No abras adjuntos desconocidos.</li>
+                    <li>Respalda información crítica.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-    </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h6 text-uppercase mb-2">Ingeniería social</h3>
+                  <p class="mb-2">Manipulación para obtener acceso o datos (llamadas, mensajes, visitas).</p>
+                  <ul class="small mb-0">
+                    <li>Valida identidad del solicitante.</li>
+                    <li>No entregues códigos ni contraseñas.</li>
+                    <li>Escala dudas a la unidad.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h6 text-uppercase mb-2">Fuga de datos</h3>
+                  <p class="mb-2">Exposición no autorizada de información institucional.</p>
+                  <ul class="small mb-0">
+                    <li>Clasifica y cifra datos sensibles.</li>
+                    <li>Comparte por canales autorizados.</li>
+                    <li>Elimina lo que no corresponda conservar.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h6 text-uppercase mb-2">Ataques a contraseñas</h3>
+                  <p class="mb-2">Intentos de adivinar o reutilizar claves filtradas.</p>
+                  <ul class="small mb-0">
+                    <li>Contraseñas únicas y largas.</li>
+                    <li>Activa MFA siempre que se pueda.</li>
+                    <li>Cambia claves ante sospechas.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                  <h3 class="h6 text-uppercase mb-2">Sitios/Apps maliciosas</h3>
+                  <p class="mb-2">Software o páginas que imitan servicios legítimos para robar datos.</p>
+                  <ul class="small mb-0">
+                    <li>Revisa URL (HTTPS y dominio correcto).</li>
+                    <li>Instala apps desde fuentes oficiales.</li>
+                    <li>Evita permisos excesivos.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- (Secciones existentes, si las quieres mantener) -->
+      <section id="unidad-cs" class="scroll-offset py-5 bg-white">
+        <div class="container">
+          <h2 class="mb-4">Ciberseguridad en la UA</h2>
+          <p><strong>Rol de la comunidad:</strong> estudiantes, académicos y funcionarios son parte activa de la
+            seguridad. Reportar incidentes oportunamente mejora la respuesta y reduce el impacto.</p>
+          <p class="mb-0"><strong>Contacto:</strong> puedes comunicarte con la <a href="dciberseguridad.html">Unidad de
+              Ciberseguridad</a> para asesoría y reporte de incidentes.</p>
+        </div>
+      </section>
+
+      <section id="leyes" class="scroll-offset py-5" style="background-color:#f8f9fa;">
+        <div class="container">
+          <h2 class="mb-4">Leyes y Normativas</h2>
+          <p class="mb-0">Consulta la sección <a href="seguridad-digital.html">Seguridad Digital</a> para ver el detalle
+            y descargar los PDF de las leyes aplicables.</p>
+        </div>
+      </section>
+
+    
   </main>
 
   <!-- Footer inyectado -->

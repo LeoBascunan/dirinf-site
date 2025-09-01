@@ -759,3 +759,14 @@ footer strong {
   margin-left: .05em;     /* opcional, separa un poco */
 }
 .kpi-number{ white-space:nowrap; } /* evita salto de línea entre número y + */
+
+/* Normalizar texto SOLO dentro de la sección de servicios */
+#servicios .list-unstyled li,
+#servicios .list-unstyled li * {
+  font-weight: 400 !important;            /* quita negrita */
+  font-family: var(--font-body) !important; /* usa familia de cuerpo */
+}
+
+/* Si por accidente hay strong/b en los ítems, neutralízalos */
+#servicios strong,
+#servicios b { font-weight: 400 !important; }
