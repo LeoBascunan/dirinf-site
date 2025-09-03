@@ -770,3 +770,32 @@ footer strong {
 /* Si por accidente hay strong/b en los ítems, neutralízalos */
 #servicios strong,
 #servicios b { font-weight: 400 !important; }
+
+/* Footer: control fino de tamaños y del logo de acreditación */
+.site-footer { 
+  /* ya tienes colores/typography forzados; solo afinamos tamaños */
+  font-size: 0.95rem; /* base del footer */
+}
+
+.site-footer .small {
+  font-size: 0.875rem !important; /* reduce el contenido existente */
+}
+
+.site-footer p { 
+  margin-bottom: .35rem; /* compacta el espaciado vertical */
+}
+
+/* Logo acreditación responsivo, respetando alto del footer oficial */
+.footer-logo-acreditacion {
+  height: clamp(38px, 6vw, 72px);
+  width: auto;
+  display: block;
+}
+
+/* Si el footer está centrado globalmente y quieres alinear a la izquierda
+   el bloque de textos desde md en adelante, descomenta: */
+
+@media (min-width: 768px) {
+  .site-footer .row.small > [class^="col-"] { text-align: left; }
+}
+

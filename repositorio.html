@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DIRINF – Repositorio de Documentos</title>
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
   <!-- Estilos del sitio -->
   <link rel="stylesheet" href="assets/css/custom.css" />
   <style>
     /* Ajustes suaves */
-    #repo-page h1 { font-size: 2rem; }
-    .doc-card .badge { font-weight: 600; }
-    .doc-meta { font-size: .9rem; color: #6c757d; }
-    .tag { font-size: .75rem; border: 1px solid #dee2e6; border-radius: .375rem; padding: .15rem .5rem; margin-right: .25rem; }
+    #repo-page h1 {
+      font-size: 2rem;
+    }
+
+    .doc-card .badge {
+      font-weight: 600;
+    }
+
+    .doc-meta {
+      font-size: .9rem;
+      color: #6c757d;
+    }
+
+    .tag {
+      font-size: .75rem;
+      border: 1px solid #dee2e6;
+      border-radius: .375rem;
+      padding: .15rem .5rem;
+      margin-right: .25rem;
+    }
+
     /* Que el sticky navbar no tape anclas (si las usas) */
-    .scroll-offset { scroll-margin-top: 100px; }
+    .scroll-offset {
+      scroll-margin-top: 100px;
+    }
   </style>
 </head>
 
@@ -74,7 +95,8 @@
   <div id="footer-placeholder"></div>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
   <!-- Scripts del sitio (inyecta nav/footer y maneja offset) -->
   <script src="assets/js/main.js"></script>
 
@@ -88,13 +110,13 @@
         title: "Ley N° 21.180 — Transformación Digital del Estado",
         category: "Leyes y Normativas",
         year: 2019,
-        file: "assets/docs/ley-21180-transformacion-digital.pdf",
+        file: "assets/docs/ley_td.pdf",
         summary: "Regula documentos y trámites electrónicos en los órganos del Estado.",
         tags: ["Ley", "Transformación Digital", "Estado"]
       },
       {
         id: "ley-19628",
-        title: "Ley N° 19.628 — Protección de la Vida Privada",
+        title: "Ley N° 19.628 — Protección de la Vida Privada (PENDIENTE)",
         category: "Leyes y Normativas",
         year: 1999,
         file: "assets/docs/ley-19628-proteccion-datos.pdf",
@@ -112,7 +134,7 @@
       },
       {
         id: "norma-pass",
-        title: "Norma de Contraseñas UA",
+        title: "Norma de Contraseñas UA (PENDIENTE)",
         category: "Políticas internas",
         year: 2024,
         file: "assets/docs/norma-contrasenas-ua.pdf",
@@ -121,7 +143,7 @@
       },
       {
         id: "manual-sia",
-        title: "Manual de Usuario — SIA",
+        title: "Manual de Usuario — SIA (PENDIENTE)",
         category: "Manuales y Guías",
         year: 2024,
         file: "assets/docs/manual-sia-usuario.pdf",
@@ -130,13 +152,33 @@
       },
       {
         id: "form-acceso",
-        title: "Formulario de Solicitud de Acceso",
+        title: "Formulario de Solicitud de Acceso (PENDIENTE)",
         category: "Formularios",
         year: 2025,
         file: "assets/docs/form-solicitud-acceso.pdf",
         summary: "Solicitud de creación de cuentas y perfiles de acceso.",
         tags: ["Formulario", "Accesos"]
+      },
+      {
+        id: "reglamento-correo",
+        title: "Reglamento de cuentas de correo electrónico institucional",
+        category: "Políticas internas",
+        year: 2025,
+        file: "assets/docs/reglamento_mail_SGD_ 1901.pdf",
+        summary: "Regulación de cuentas de correo electrónico institucionales .",
+        tags: ["Norma", "Política"]
+      },
+      {
+        id: "amenazas-Ciberseguridad",
+        title: "Tipos de Ciber Amenazas ",
+        category: "Manuales y Guías",
+        year: 2025,
+        file: "assets/docs/reglamento_mail_SGD_ 1901.pdf",
+        summary: "¡Cuidado con los fraudes! Protege tu información y tu dinero.",
+        tags: ["Manual", "Seguridad"]
       }
+
+      
     ];
 
     // ====== 2) Utilidades ======================================================
@@ -161,34 +203,34 @@
     }
 
     // ====== 3) Render ==========================================================
-    const $list  = document.getElementById("doc-list");
+    const $list = document.getElementById("doc-list");
     const $empty = document.getElementById("doc-empty");
-    const $q     = document.getElementById("doc-search");
-    const $cat   = document.getElementById("doc-filter");
-    const $sort  = document.getElementById("doc-sort");
+    const $q = document.getElementById("doc-search");
+    const $cat = document.getElementById("doc-filter");
+    const $sort = document.getElementById("doc-sort");
 
     let state = { q: "", cat: "__all__", sort: "year-desc" };
 
     function match(doc) {
       const byCat = state.cat === "__all__" || doc.category === state.cat;
-      const text  = (doc.title + " " + (doc.summary||"") + " " + (doc.tags||[]).join(" ")).toLowerCase();
-      const byQ   = !state.q || text.includes(state.q.toLowerCase());
+      const text = (doc.title + " " + (doc.summary || "") + " " + (doc.tags || []).join(" ")).toLowerCase();
+      const byQ = !state.q || text.includes(state.q.toLowerCase());
       return byCat && byQ;
     }
 
     function sortDocs(a, b) {
       switch (state.sort) {
-        case "year-asc":  return (a.year||0) - (b.year||0) || a.title.localeCompare(b.title);
+        case "year-asc": return (a.year || 0) - (b.year || 0) || a.title.localeCompare(b.title);
         case "title-asc": return a.title.localeCompare(b.title);
-        case "title-desc":return b.title.localeCompare(a.title);
+        case "title-desc": return b.title.localeCompare(a.title);
         case "year-desc":
-        default:          return (b.year||0) - (a.year||0) || a.title.localeCompare(b.title);
+        default: return (b.year || 0) - (a.year || 0) || a.title.localeCompare(b.title);
       }
     }
 
     function card(doc) {
       const size = doc.size ? ` · ${doc.size}` : "";
-      const tags = (doc.tags||[]).map(t => `<span class="tag">${t}</span>`).join(" ");
+      const tags = (doc.tags || []).map(t => `<span class="tag">${t}</span>`).join(" ");
       return `
         <div class="col">
           <article class="card h-100 doc-card">
@@ -228,4 +270,5 @@
     resolveSizes(DOCS).then(() => render(DOCS));
   </script>
 </body>
+
 </html>
