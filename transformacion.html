@@ -1,137 +1,324 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DIRINF – Transformación Digital</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    crossorigin="anonymous" />
-
-  <!-- Estilos personalizados -->
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <!-- Estilos del sitio -->
   <link rel="stylesheet" href="assets/css/custom.css" />
 </head>
-
 <body>
-  <!-- Navbar inyectado -->
+  <!-- Nav inyectado -->
   <div id="nav-placeholder"></div>
 
   <main class="py-5">
+    <!-- Título -->
     <div class="container">
-      <h1 class="mb-5">Transformación Digital</h1>
-
-      <!-- ¿Qué es la Transformación Digital? -->
-      <section id="que-es" class="scroll-offset py-5" style="background-color: #f8f9fa">
-        <div class="container">
-          <h2 class="mb-4">¿Qué es la Transformación Digital?</h2>
-          <p>
-            La transformación digital es el proceso mediante el cual las organizaciones incorporan tecnologías digitales
-            en sus operaciones, servicios y modelos de gestión para adaptarse a los nuevos desafíos y generar mayor
-            valor.
-          </p>
-          <p>
-            Más allá de la adopción tecnológica, se trata principalmente de un cambio cultural, que implica repensar la
-            forma en que trabajamos, colaboramos y entregamos valor, promoviendo una mentalidad más ágil, innovadora y
-            centrada en las personas.
-          </p>
-          <p>
-            Su estructura se basa en tres pilares fundamentales: <strong>Tecnología</strong>, como habilitador de nuevas
-            capacidades; <strong>Procesos</strong>, que deben ser rediseñados y optimizados; y
-            <strong>Personas</strong>, cuyo compromiso y adaptación son clave para el éxito del cambio.
-          </p>
-        </div>
-      </section>
-
-      <!-- Transformación Digital en la UA -->
-      <section id="td-ua" class="scroll-offset py-5 bg-white">
-        <div class="container">
-          <h2 class="mb-4">Transformación Digital en la UA</h2>
-          <p>
-            La Universidad de Antofagasta se encuentra ante un desafío clave: avanzar decididamente en su proceso de
-            Transformación Digital. Esto no solo implica incorporar tecnología, sino transformar de forma profunda y
-            transversal su cultura, estructura y estrategia institucional.
-          </p>
-        </div>
-      </section>
-
-      <!-- Misión y Visión -->
-      <section id="mision-vision" class="scroll-offset py-5" style="background-color: #f8f9fa">
-        <div class="container">
-          <h2 class="mb-4">Misión y Visión</h2>
-          <p><strong>Visión:</strong> Ser una Universidad estatal de referencia nacional e internacional, reconocida por
-            liderar la transformación digital desde el norte de Chile, articulando tecnologías, procesos, datos y
-            cultura organizacional.</p>
-          <p><strong>Misión:</strong> Impulsar la transformación digital como estrategia institucional, movilizando a la
-            comunidad hacia la colaboración, el aprendizaje continuo y la innovación responsable, con foco en las
-            personas.</p>
-        </div>
-      </section>
-
-      <!-- Unidad de Transformación Digital -->
-      <section id="unidad-td" class="scroll-offset py-5 bg-white">
-        <div class="container">
-          <h2 class="mb-4">Unidad de Transformación Digital</h2>
-          <p>Próximamente se publicará información sobre la estructura y el equipo de la Unidad de Transformación
-            Digital.</p>
-        </div>
-      </section>
-
-      <!-- ¿Qué hacemos? -->
-      <section id="que-hacemos" class="scroll-offset py-5" style="background-color: #f8f9fa">
-        <div class="container">
-          <h2 class="mb-4">¿Qué hacemos?</h2>
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-              <div class="p-3 bg-white  rounded">Gobernanza de datos</div>
-            </div>
-            <div class="col">
-              <div class="p-3 bg-white  rounded">Gestión del cambio</div>
-            </div>
-            <div class="col">
-              <div class="p-3 bg-white  rounded">Integración e interoperabilidad</div>
-            </div>
-            <div class="col">
-              <div class="p-3 bg-white  rounded">Desarrollo de proyectos de tecnología</div>
-            </div>
-            <div class="col">
-              <div class="p-3 bg-white  rounded">Capacitación sobre herramientas digitales de gobierno digital: Firmagob
-                y Docdigital</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ¿Quiénes somos? -->
-      <section id="quienes-somos" class="scroll-offset py-5 bg-white">
-        <div class="container">
-          <h2 class="mb-4">¿Quiénes somos?</h2>
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-              <div class="p-3 bg-light  rounded">Unidad de TD</div>
-            </div>
-            <div class="col">
-              <div class="p-3 bg-light  rounded">Gobernanza de datos</div>
-            </div>
-            <div class="col">
-              <div class="p-3 bg-light  rounded">Estrategia y Gestión del Cambio</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <h2 class="mb-5">Transformación Digital</h2>
     </div>
+
+    <!-- ¿Qué es la Transformación Digital? (franja ancho completo) -->
+    <section id="que-es-td" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">¿Qué es la Transformación Digital?</h2>
+        <p>
+          Es la adopción intencional de tecnologías, datos y nuevas formas de trabajo para mejorar la experiencia de las personas, 
+          simplificar procesos, aumentar la eficiencia institucional y crear valor público. No se trata solo de sistemas: 
+          incluye <strong>personas</strong>, <strong>procesos</strong>, <strong>cultura</strong>, <strong>datos</strong> y <strong>tecnología</strong>.
+        </p>
+        <p class="mb-0">
+          En la UA buscamos trámites y servicios más simples, accesibles y seguros, con decisiones basadas en datos y foco en la comunidad universitaria.
+        </p>
+      </div>
+    </section>
+
+    <!-- Principios / Pilares -->
+    <section id="principios-td" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="mb-4">Pilares de la Transformación Digital</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h3 class="h5">Personas y valor</h3>
+                <p class="mb-2">Diseño centrado en usuarios: accesibilidad, experiencia y servicio.</p>
+                <ul class="small mb-0">
+                  <li>Feedback continuo de la comunidad.</li>
+                  <li>Transparencia y valor público.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h3 class="h5">Procesos simples</h3>
+                <p class="mb-2">Digitalización y automatización con reglas claras.</p>
+                <ul class="small mb-0">
+                  <li>Menos pasos y menos papeles.</li>
+                  <li>Medición de tiempos y cuellos de botella.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h3 class="h5">Datos e interoperabilidad</h3>
+                <p class="mb-2">Decisiones informadas y sistemas que se “hablan”.</p>
+                <ul class="small mb-0">
+                  <li>Calidad, gobernanza y seguridad de datos.</li>
+                  <li>Integraciones entre plataformas.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h3 class="h5">Tecnología adecuada</h3>
+                <p class="mb-2">Soluciones costo-efectivas, escalables y mantenibles.</p>
+                <ul class="small mb-0">
+                  <li>Estándares y reutilización.</li>
+                  <li>Nube, APIs y automatización cuando agrega valor.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <h3 class="h5">Cultura y cambio</h3>
+                <p class="mb-2">Capacitación, colaboración y mejora continua.</p>
+                <ul class="small mb-0">
+                  <li>Comunicación y acompañamiento al cambio.</li>
+                  <li>Medición de impacto y aprendizaje.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios para la comunidad -->
+    <section id="beneficios-td" class="py-5" style="background-color:#f8f9fa;">
+      <div class="container">
+        <h2 class="mb-4">Beneficios para la comunidad UA</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <ul class="mb-0">
+              <li>Trámites en línea y seguimiento del estado.</li>
+              <li>Menos tiempos de espera y mayor disponibilidad.</li>
+              <li>Experiencias simplificadas y accesibles.</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="mb-0">
+              <li>Mejor calidad de datos para decisiones.</li>
+              <li>Interoperabilidad entre sistemas.</li>
+              <li>Reducción de errores y retrabajos.</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="mb-0">
+              <li>Transparencia y trazabilidad.</li>
+              <li>Mayor seguridad y continuidad operativa.</li>
+              <li>Servicios disponibles desde cualquier dispositivo.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buenas prácticas para usuarios -->
+    <section id="buenas-practicas-td" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="mb-4">Buenas prácticas para usar servicios digitales</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="accordion" id="bpTd1">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="tdbp1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tdbp1c" aria-expanded="true" aria-controls="tdbp1c">
+                    Identidad digital y firma
+                  </button>
+                </h2>
+                <div id="tdbp1c" class="accordion-collapse collapse show" aria-labelledby="tdbp1" data-bs-parent="#bpTd1">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      <li>Usa tu cuenta institucional y protege tus credenciales.</li>
+                      <li>Verifica requisitos para firma electrónica (simple o avanzada).</li>
+                      <li>Revisa el documento antes de firmar o aprobar.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="tdbp2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tdbp2c" aria-expanded="false" aria-controls="tdbp2c">
+                    Trámites y documentación
+                  </button>
+                </h2>
+                <div id="tdbp2c" class="accordion-collapse collapse" aria-labelledby="tdbp2" data-bs-parent="#bpTd1">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      <li>Prefiere cargar documentos digitales válidos (PDF legible, peso adecuado).</li>
+                      <li>Sigue el flujo indicado y mantén tus datos actualizados.</li>
+                      <li>Guarda el número/folio de tu solicitud para seguimiento.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="tdbp3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tdbp3c" aria-expanded="false" aria-controls="tdbp3c">
+                    Accesibilidad y soporte
+                  </button>
+                </h2>
+                <div id="tdbp3c" class="accordion-collapse collapse" aria-labelledby="tdbp3" data-bs-parent="#bpTd1">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      <li>Usa navegadores actualizados y conexión estable.</li>
+                      <li>Si encuentras barreras de acceso, repórtalas con detalle.</li>
+                      <li>Revisa manuales y preguntas frecuentes antes de abrir un ticket.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="accordion" id="bpTd2">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="tdbp4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tdbp4c" aria-expanded="false" aria-controls="tdbp4c">
+                    Datos personales y seguridad
+                  </button>
+                </h2>
+                <div id="tdbp4c" class="accordion-collapse collapse" aria-labelledby="tdbp4" data-bs-parent="#bpTd2">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      <li>Comparte datos solo en canales oficiales.</li>
+                      <li>Respeta la normativa de protección de datos personales.</li>
+                      <li>Evita reenviar información sensible por correo.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="tdbp5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tdbp5c" aria-expanded="false" aria-controls="tdbp5c">
+                    Participación y mejora continua
+                  </button>
+                </h2>
+                <div id="tdbp5c" class="accordion-collapse collapse" aria-labelledby="tdbp5" data-bs-parent="#bpTd2">
+                  <div class="accordion-body">
+                    <ul class="mb-0">
+                      <li>Entrega feedback para mejorar los servicios.</li>
+                      <li>Participa en pilotos/capacitaciones cuando se ofrezcan.</li>
+                      <li>Comparte buenas prácticas con tu equipo/curso.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- Preguntas frecuentes -->
+    <section id="faq-td" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="mb-4">Preguntas frecuentes</h2>
+        <div class="accordion" id="faqTd">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1c" aria-expanded="true" aria-controls="q1c">
+                ¿Qué necesito para firmar documentos digitalmente?
+              </button>
+            </h2>
+            <div id="q1c" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqTd">
+              <div class="accordion-body">
+                Revisa si tu trámite requiere firma simple o avanzada, y asegúrate de contar con tu identidad digital institucional activa.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2c" aria-expanded="false" aria-controls="q2c">
+                ¿Cómo sé en qué estado va mi trámite?
+              </button>
+            </h2>
+            <div id="q2c" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqTd">
+              <div class="accordion-body">
+                Siempre que sea posible, usa el número o folio de tu solicitud en el sistema correspondiente para consultar su estado y los pasos siguientes.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3c" aria-expanded="false" aria-controls="q3c">
+                ¿Qué hacer si un sistema no funciona?
+              </button>
+            </h2>
+            <div id="q3c" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqTd">
+              <div class="accordion-body">
+                Captura el error, indica fecha y paso donde ocurre, y abre un ticket en el Portal de Servicios. Con más contexto, el soporte es más rápido.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rol de la comunidad -->
+    <section id="rol-td" class="py-5" style="background-color:#f8f9fa;">
+      <div class="container">
+        <h2 class="mb-4">Transformación Digital en la UA</h2>
+        <p><strong>Rol de la comunidad:</strong> estudiantes, académicos y funcionarios pueden impulsar mejoras usando los servicios digitales, reportando barreras y aportando ideas.</p>
+        <p class="mb-0"><strong>Soporte:</strong> ante dudas o problemas, utiliza el <a href="https://caichinque.uantof.cl/portalservicios/comun/SemaforoServlet">Portal de Servicios</a>.</p>
+      </div>
+    </section>
+
+    <!-- Marco normativo -->
+    <section id="leyes-td" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="mb-4">Marco normativo</h2>
+        <p class="mb-0">
+          Revisa la sección <a href="seguridad-digital.html">Seguridad Digital</a> para acceder a las leyes y documentos asociados (por ejemplo, 
+          <em>Ley de Transformación Digital del Estado N° 21.180</em>).
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer inyectado -->
   <div id="footer-placeholder"></div>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
-  <!-- JS custom -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- Fetch nav/footer -->
   <script src="assets/js/main.js"></script>
 </body>
-
 </html>
