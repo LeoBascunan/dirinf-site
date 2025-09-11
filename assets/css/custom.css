@@ -735,13 +735,18 @@ footer strong {
     margin-bottom: .5rem;
   }
 }
+
 /* Contingencia: mostrar imagen completa (sin recorte) */
 #contingencia .noticia-img.contain {
-  height: 320px;                /* conserva altura uniforme con Noticias */
+  height: 320px;
+  /* conserva altura uniforme con Noticias */
   width: 100%;
-  object-fit: contain !important; /* ← clave: muestra toda la imagen */
-  object-position: top center;    /* parte superior visible; usa 'center' si prefieres centrar */
-  background: transparent;               /* “barras” discretas si no calza exacto; cámbialo o quítalo */
+  object-fit: contain !important;
+  /* ← clave: muestra toda la imagen */
+  object-position: top center;
+  /* parte superior visible; usa 'center' si prefieres centrar */
+  background: transparent;
+  /* “barras” discretas si no calza exacto; cámbialo o quítalo */
 }
 
 /* Alternativa: que la imagen defina su alto (sin barras), pero las filas ya no tendrán la misma altura */
@@ -752,37 +757,52 @@ footer strong {
   object-position: top center;
   background: transparent;
 }
+
 /* Solo agrega el + en los kpi que tengan la clase .plus */
-.kpi-number.plus::after{
+.kpi-number.plus::after {
   content: " +";
-  font-weight: 700;       /* opcional */
-  margin-left: .05em;     /* opcional, separa un poco */
+  font-weight: 700;
+  /* opcional */
+  margin-left: .05em;
+  /* opcional, separa un poco */
 }
-.kpi-number{ white-space:nowrap; } /* evita salto de línea entre número y + */
+
+.kpi-number {
+  white-space: nowrap;
+}
+
+/* evita salto de línea entre número y + */
 
 /* Normalizar texto SOLO dentro de la sección de servicios */
 #servicios .list-unstyled li,
 #servicios .list-unstyled li * {
-  font-weight: 400 !important;            /* quita negrita */
-  font-family: var(--font-body) !important; /* usa familia de cuerpo */
+  font-weight: 400 !important;
+  /* quita negrita */
+  font-family: var(--font-body) !important;
+  /* usa familia de cuerpo */
 }
 
 /* Si por accidente hay strong/b en los ítems, neutralízalos */
 #servicios strong,
-#servicios b { font-weight: 400 !important; }
+#servicios b {
+  font-weight: 400 !important;
+}
 
 /* Footer: control fino de tamaños y del logo de acreditación */
-.site-footer { 
+.site-footer {
   /* ya tienes colores/typography forzados; solo afinamos tamaños */
-  font-size: 0.95rem; /* base del footer */
+  font-size: 0.95rem;
+  /* base del footer */
 }
 
 .site-footer .small {
-  font-size: 0.875rem !important; /* reduce el contenido existente */
+  font-size: 0.875rem !important;
+  /* reduce el contenido existente */
 }
 
-.site-footer p { 
-  margin-bottom: .35rem; /* compacta el espaciado vertical */
+.site-footer p {
+  margin-bottom: .35rem;
+  /* compacta el espaciado vertical */
 }
 
 /* Logo acreditación responsivo, respetando alto del footer oficial */
@@ -796,6 +816,65 @@ footer strong {
    el bloque de textos desde md en adelante, descomenta: */
 
 @media (min-width: 768px) {
-  .site-footer .row.small > [class^="col-"] { text-align: left; }
+  .site-footer .row.small>[class^="col-"] {
+    text-align: left;
+  }
 }
 
+/* Botón vertical angosto, misma altura que las cartas */
+.servicios-row .btn-vertical {
+  width: 56px;
+  /* angosto */
+  padding: 0;
+  /* sin padding extra */
+  border-radius: .5rem;
+  /* similar al radio de las cards */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicios-row .btn-vertical .btn-vertical-text {
+  transform: rotate(-90deg);
+  /* texto vertical */
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* En pantallas chicas, que el botón deje de ser vertical y baje bajo la 3ª carta */
+@media (max-width: 991.98px) {
+  .servicios-row .btn-vertical {
+    width: auto;
+    padding: .5rem 1rem;
+  }
+
+  .servicios-row .btn-vertical .btn-vertical-text {
+    transform: none;
+  }
+
+  .servicios-row>.col-lg-4.d-flex {
+    flex-direction: column;
+  }
+}
+
+.card-illus {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (min-width:992px) {
+  .card-illus {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+p {
+  hyphens: none;
+  /* desactiva cortes automáticos en todos los párrafos */
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+}

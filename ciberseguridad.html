@@ -11,6 +11,22 @@
     crossorigin="anonymous" />
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="assets/css/custom.css" />
+
+  <!-- Ilustraciones en cards (tamaño y comportamiento) -->
+  <style>
+    .card-illus {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    @media (min-width: 992px) {
+      .card-illus {
+        width: 96px;
+        height: 96px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -22,6 +38,7 @@
     <div class="container">
       <h2 class="mb-5">Ciberseguridad</h2>
     </div>
+
     <!-- ¿Qué es la Ciberseguridad? -->
     <section id="que-es" class="py-5 bg-light">
       <div class="container">
@@ -38,58 +55,86 @@
           Protección de Datos Personales N° 21.719 y la Ley de Transformación Digital del Estado N° 21.180, entre
           otras.
         </p>
+      <div class="mt-3 d-flex flex-wrap gap-2">
+
+        <a href="#buenas-practicas" class="btn btn-outline-primary ">Ir a Buenas prácticas</a>
+        <a href="#amenazas-comunes" class="btn btn-outline-primary">Ir a Amenazas comunes</a>
+      </div>
+        
       </div>
     </section>
 
-
-
-    <!-- NUEVO: Principios de la Ciberseguridad -->
+    <!-- Principios de la Ciberseguridad (3 CARDS CON IMAGEN) -->
     <section id="principios" class="scroll-offset py-5 bg-white">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
           <h2 class="mb-0">Principios de la Ciberseguridad</h2>
-          <a href="#buenas-practicas" class="btn btn-outline-primary btn-sm">Ir a Buenas prácticas</a>
+         
         </div>
 
         <div class="row g-4">
+          <!-- Confidencialidad -->
           <div class="col-md-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h5">Confidencialidad</h3>
-                <p class="mb-2">Acceso a la información solo por personas autorizadas.</p>
-                <ul class="small mb-0">
-                  <li>Control de accesos y perfiles.</li>
-                  <li>Cifrado de datos sensibles.</li>
-                  <li>Uso responsable del correo institucional.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h5">Confidencialidad</h3>
+                    <p class="mb-2">Acceso a la información solo por personas autorizadas.</p>
+                    <ul class="small mb-0">
+                      <li>Control de accesos y perfiles.</li>
+                      <li>Cifrado de datos sensibles.</li>
+                      <li>Uso responsable del correo institucional.</li>
+                    </ul>
+                  </div>
+                  <!-- REEMPLAZAR RUTA -->
+                  <img src="assets/img/ciberseguridad/confidencialidad.png" alt="Ilustración de confidencialidad"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Integridad -->
           <div class="col-md-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h5">Integridad</h3>
-                <p class="mb-2">Los datos se mantienen completos y sin alteraciones no autorizadas.</p>
-                <ul class="small mb-0">
-                  <li>Controles de cambios y auditorías.</li>
-                  <li>Firmas/huellas digitales y verificación.</li>
-                  <li>Respaldo ante corrupción de datos.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h5">Integridad</h3>
+                    <p class="mb-2">Los datos se mantienen completos y sin alteraciones no autorizadas.</p>
+                    <ul class="small mb-0">
+                      <li>Controles de cambios y auditorías.</li>
+                      <li>Firmas/huellas digitales y verificación.</li>
+                      <li>Respaldo ante corrupción de datos.</li>
+                    </ul>
+                  </div>
+                  <!-- REEMPLAZAR RUTA -->
+                  <img src="assets/img/ciberseguridad/integridad.png" alt="Ilustración de integridad"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Disponibilidad -->
           <div class="col-md-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h5">Disponibilidad</h3>
-                <p class="mb-2">Los sistemas y datos están accesibles cuando se necesitan.</p>
-                <ul class="small mb-0">
-                  <li>Monitoreo y alta disponibilidad.</li>
-                  <li>Planes de continuidad y recuperación.</li>
-                  <li>Gestión de parches y mantenimiento.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h5">Disponibilidad</h3>
+                    <p class="mb-2">Los sistemas y datos están accesibles cuando se necesitan.</p>
+                    <ul class="small mb-0">
+                      <li>Monitoreo y alta disponibilidad.</li>
+                      <li>Planes de continuidad y recuperación.</li>
+                      <li>Gestión de parches y mantenimiento.</li>
+                    </ul>
+                  </div>
+                  <!-- REEMPLAZAR RUTA -->
+                  <img src="assets/img/ciberseguridad/disponibilidad.png" alt="Ilustración de disponibilidad"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
@@ -98,12 +143,12 @@
       </div>
     </section>
 
-    <!-- NUEVO: Buenas prácticas para la comunidad universitaria -->
+    <!-- Buenas prácticas (accordion; no lleva imagen por item) -->
     <section id="buenas-practicas" class="scroll-offset py-5" style="background-color:#f8f9fa;">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
           <h2 class="mb-0">Buenas prácticas para la comunidad universitaria</h2>
-          <a href="#amenazas-comunes" class="btn btn-outline-primary btn-sm">Ir a Amenazas comunes</a>
+       
         </div>
 
         <div class="row g-4">
@@ -116,7 +161,7 @@
                     Contraseñas seguras y autenticación
                   </button>
                 </h2>
-                <div id="bp1c" class="accordion-collapse collapse show" aria-labelledby="bp1"
+                <div id="bp1c" class="accordion-collapse collapse" aria-labelledby="bp1"
                   data-bs-parent="#accordionBuenas">
                   <div class="accordion-body">
                     <ul class="mb-0">
@@ -235,92 +280,140 @@
       </div>
     </section>
 
-    <!-- NUEVO: Amenazas comunes -->
+    <!-- Amenazas comunes (6 CARDS CON IMAGEN) -->
     <section id="amenazas-comunes" class="scroll-offset py-5 bg-white">
       <div class="container">
         <h2 class="mb-4">Amenazas comunes</h2>
 
         <div class="row g-4">
+          <!-- Phishing (usa la imagen de ejemplo) -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h6 text-uppercase mb-2">Phishing</h3>
-                <p class="mb-2">Mensajes que suplantan identidad para robar credenciales o información.</p>
-                <ul class="small mb-0">
-                  <li>Verifica remitente y dominio.</li>
-                  <li>No hagas clic en enlaces dudosos.</li>
-                  <li>Reporta correos sospechosos.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h6 text-uppercase mb-2">Phishing</h3>
+                    <p class="mb-2">Mensajes que suplantan identidad para robar credenciales o información.</p>
+                    <ul class="small mb-0">
+                      <li>Verifica remitente y dominio.</li>
+                      <li>No hagas clic en enlaces dudosos.</li>
+                      <li>Reporta correos sospechosos.</li>
+                    </ul>
+                  </div>
+                  <!-- AQUÍ PON LA RUTA DE TU EJEMPLO -->
+                  <img src="assets\img\ciberseguridad/phising.png" alt="Ilustración de phishing"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Malware / Ransomware -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h6 text-uppercase mb-2">Malware / Ransomware</h3>
-                <p class="mb-2">Software malicioso que puede cifrar, robar o dañar información.</p>
-                <ul class="small mb-0">
-                  <li>Mantén antivirus y actualizaciones al día.</li>
-                  <li>No abras adjuntos desconocidos.</li>
-                  <li>Respalda información crítica.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h6 text-uppercase mb-2">Malware / Ransomware</h3>
+                    <p class="mb-2">Software malicioso que puede cifrar, robar o dañar información.</p>
+                    <ul class="small mb-0">
+                      <li>Mantén antivirus y actualizaciones al día.</li>
+                      <li>No abras adjuntos desconocidos.</li>
+                      <li>Respalda información crítica.</li>
+                    </ul>
+                  </div>
+                  <!-- REEMPLAZAR RUTA -->
+                  <img src="assets/img/ciberseguridad/malware.png" alt="Ilustración de malware"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Ingeniería social -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h6 text-uppercase mb-2">Ingeniería social</h3>
-                <p class="mb-2">Manipulación para obtener acceso o datos (llamadas, mensajes, visitas).</p>
-                <ul class="small mb-0">
-                  <li>Valida identidad del solicitante.</li>
-                  <li>No entregues códigos ni contraseñas.</li>
-                  <li>Escala dudas a la unidad.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h6 text-uppercase mb-2">Ingeniería social</h3>
+                    <p class="mb-2">Manipulación para obtener acceso o datos (llamadas, mensajes, visitas).</p>
+                    <ul class="small mb-0">
+                      <li>Valida identidad del solicitante.</li>
+                      <li>No entregues códigos ni contraseñas.</li>
+                      <li>Escala dudas a la unidad.</li>
+                    </ul>
+                  </div>
+                  <!-- REEMPLAZAR RUTA -->
+                  <img src="assets/img/ciberseguridad/social.png" alt="Ilustración de ingeniería social"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Fuga de datos -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h6 text-uppercase mb-2">Fuga de datos</h3>
-                <p class="mb-2">Exposición no autorizada de información institucional.</p>
-                <ul class="small mb-0">
-                  <li>Clasifica y cifra datos sensibles.</li>
-                  <li>Comparte por canales autorizados.</li>
-                  <li>Elimina lo que no corresponda conservar.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h6 text-uppercase mb-2">Fuga de datos</h3>
+                    <p class="mb-2">Exposición no autorizada de información institucional.</p>
+                    <ul class="small mb-0">
+                      <li>Clasifica y cifra datos sensibles.</li>
+                      <li>Comparte por canales autorizados.</li>
+                      <li>Elimina lo que no corresponda conservar.</li>
+                    </ul>
+                  </div>
+                  <!-- REEMPLAZAR RUTA -->
+                  <img src="assets/img/ciberseguridad/fuga.png" alt="Ilustración de fuga de datos"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Ataques a contraseñas -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h6 text-uppercase mb-2">Ataques a contraseñas</h3>
-                <p class="mb-2">Intentos de adivinar o reutilizar claves filtradas.</p>
-                <ul class="small mb-0">
-                  <li>Contraseñas únicas y largas.</li>
-                  <li>Activa MFA siempre que se pueda.</li>
-                  <li>Cambia claves ante sospechas.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h6 text-uppercase mb-2">Ataques a contraseñas</h3>
+                    <p class="mb-2">Intentos de adivinar o reutilizar claves filtradas.</p>
+                    <ul class="small mb-0">
+                      <li>Contraseñas únicas y largas.</li>
+                      <li>Activa MFA siempre que se pueda.</li>
+                      <li>Cambia claves ante sospechas.</li>
+                    </ul>
+                  </div>
+                  <!-- REEMPLAZAR RUTA -->
+                  <img src="assets/img/ciberseguridad/ataques.png" alt="Ilustración de ataques a contraseñas"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Sitios/Apps maliciosas -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-0">
               <div class="card-body">
-                <h3 class="h6 text-uppercase mb-2">Sitios/Apps maliciosas</h3>
-                <p class="mb-2">Software o páginas que imitan servicios legítimos para robar datos.</p>
-                <ul class="small mb-0">
-                  <li>Revisa URL (HTTPS y dominio correcto).</li>
-                  <li>Instala apps desde fuentes oficiales.</li>
-                  <li>Evita permisos excesivos.</li>
-                </ul>
+                <div class="d-flex align-items-start gap-3">
+                  <div class="flex-grow-1">
+                    <h3 class="h6 text-uppercase mb-2">Sitios/Apps maliciosas</h3>
+                    <p class="mb-2">Software o páginas que imitan servicios legítimos para robar datos.</p>
+                    <ul class="small mb-0">
+                      <li>Revisa URL (HTTPS y dominio correcto).</li>
+                      <li>Instala apps desde fuentes oficiales.</li>
+                      <li>Evita permisos excesivos.</li>
+                    </ul>
+                  </div>
+                  <!-- REEMPLAZAR RUTA -->
+                  <img src="assets/img/ciberseguridad/sitios.png" alt="Ilustración de sitios o apps maliciosas"
+                       class="card-illus rounded">
+                </div>
               </div>
             </div>
           </div>
@@ -336,7 +429,7 @@
         <p><strong>Rol de la comunidad:</strong> Estudiantes, académicos y funcionarios pueden colaborar para un entorno
           digital seguro. Reportar sospechas o incidentes a tiempo mejora la respuesta y reduce el impacto de posibles
           amenazas.</p>
-        <p class="mb-0"><strong>Contacto:</strong> puedes comunicarte con la <a href="dciberseguridad.html">Unidad de
+        <p class="mb-0"><strong>Contacto:</strong> puedes comunicarte con la <a href="Uciberseguridad.html">Unidad de
             Ciberseguridad</a> para asesoría y reporte de incidentes.</p>
       </div>
     </section>
@@ -348,7 +441,6 @@
           y descargar los PDF de las leyes aplicables.</p>
       </div>
     </section>
-
 
   </main>
 
